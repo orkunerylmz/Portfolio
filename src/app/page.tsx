@@ -286,35 +286,37 @@ export default function Home() {
                 <a href="#iletisim" className="btn-secondary">İletişime Geç</a>
               </div>
             </div>
-            <div className="hero-image">
+            <div className="hero-image-wrapper">
               <div className="hero-image-border" />
-              <div className="hero-image-shine" />
+              <div className="hero-image">
+                <div className="hero-image-shine" />
 
-              {/* Hero Card Overlay Info Bar 2.0 */}
-              <div className="hero-card-overlay">
-                <div className="overlay-items">
-                  <div className="overlay-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                    <span className="overlay-text">AI ENGINEER</span>
-                  </div>
-                  <div className="overlay-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                    <span className="overlay-text">DATA SCIENTIST</span>
-                  </div>
-                  <div className="overlay-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    <span className="overlay-text">ML OPS</span>
+                {/* Hero Card Overlay Info Bar 2.0 */}
+                <div className="hero-card-overlay">
+                  <div className="overlay-items">
+                    <div className="overlay-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                      <span className="overlay-text">AI ENGINEER</span>
+                    </div>
+                    <div className="overlay-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                      <span className="overlay-text">DATA SCIENTIST</span>
+                    </div>
+                    <div className="overlay-item">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                      <span className="overlay-text">ML OPS</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <Image
-                src="/images/me.jpeg"
-                alt="Orkun Eryılmaz"
-                width={400}
-                height={400}
-                priority
-              />
+                <Image
+                  src="/images/me.jpeg"
+                  alt="Orkun Eryılmaz"
+                  width={400}
+                  height={400}
+                  priority
+                />
+              </div>
             </div>
           </div>
 
