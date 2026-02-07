@@ -763,7 +763,7 @@ main {
   inset: -2px;
   padding: 2px;
   background: conic-gradient(from var(--border-angle), transparent 20%, var(--accent), transparent 80%);
-  border-radius: 26px;
+  border-radius: 24px;
   z-index: -1;
   animation: border-spin 4s linear infinite;
   -webkit-mask:
@@ -1788,9 +1788,12 @@ select.form-input {
   .hero-image-wrapper {
     width: 300px;
     height: 400px;
-    margin: 40px auto 30px;
-    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     isolation: isolate;
+  }
+
+  .hero-image-border {
+    border-radius: 20px;
   }
 
   .hero-image {
