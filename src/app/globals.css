@@ -929,13 +929,58 @@ main {
   background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.02) 100%);
 }
 
-.terminal-line {
-  margin-bottom: 6px;
+.terminal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-.terminal-prompt {
-  color: var(--accent);
-  font-weight: 600;
+.terminal-info-item .info-label {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.terminal-info-item .info-value {
+  color: white;
+  font-size: 14px;
+}
+
+.terminal-info-item .info-subtext {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.terminal-social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.terminal-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 100px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.terminal-social-link:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
 }
 
 .terminal-command {
@@ -1890,8 +1935,13 @@ select.form-input {
 
   .skills-grid,
   .projects-grid,
-  .contact-grid {
+  .contact-grid,
+  .terminal-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .terminal-social-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 
