@@ -160,6 +160,7 @@ const contacts = [
 ];
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [skillsReady, setSkillsReady] = useState(false);
 
   // Contact Form State
@@ -241,7 +242,29 @@ export default function Home() {
           <li><a href="#iletisim">İletişim</a></li>
         </ul>
         <a href="#iletisim" className="nav-cta">Bana Ulaşın</a>
+
+        {/* Hamburger Button */}
+        <button
+          className="hamburger-btn"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`} />
+        </button>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+        <ul className="mobile-nav-links">
+          <li><a href="#hakkimda" onClick={() => setIsMenuOpen(false)}>Hakkımda</a></li>
+          <li><a href="#yetenekler" onClick={() => setIsMenuOpen(false)}>Yetenekler</a></li>
+          <li><a href="#projeler" onClick={() => setIsMenuOpen(false)}>Projeler</a></li>
+          <li><a href="#fiyatlandirma" onClick={() => setIsMenuOpen(false)}>Fiyatlandırma</a></li>
+          <li><a href="#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</a></li>
+        </ul>
+      </div>
 
       {/* Main */}
       <main>
@@ -295,13 +318,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll Down Arrow */}
-          <a href="#hakkimda-terminal" className="scroll-down-arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 5v14M19 12l-7 7-7-7" />
-            </svg>
-            <span>Aşağı Kaydır</span>
-          </a>
         </section>
 
         {/* Terminal Section - Hakkımda */}

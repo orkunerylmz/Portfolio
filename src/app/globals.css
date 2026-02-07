@@ -314,11 +314,12 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  padding: 14px 36px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  padding: 14px 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 28px;
   background: rgba(14, 14, 20, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -421,46 +422,6 @@ main {
   position: relative;
 }
 
-/* Scroll Down Arrow */
-.scroll-down-arrow {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--accent);
-  text-decoration: none;
-  animation: bounce 2s infinite;
-  transition: all 0.3s;
-}
-
-.scroll-down-arrow svg {
-  width: 50px;
-  height: 50px;
-  padding: 13px;
-  border-radius: 50%;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-}
-
-.scroll-down-arrow span {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-}
-
-.scroll-down-arrow:hover {
-  transform: translateX(-50%) scale(1.05);
-}
-
-.scroll-down-arrow:hover svg {
-  background: rgba(139, 92, 246, 0.2);
-  border-color: rgba(139, 92, 246, 0.5);
-}
 
 @keyframes bounce {
 
@@ -491,6 +452,13 @@ main {
   width: 100%;
 }
 
+.hero-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .hero-text h1 {
   font-size: 56px;
   font-weight: 800;
@@ -517,6 +485,7 @@ main {
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-socials {
@@ -891,10 +860,9 @@ main {
   border: 1px solid rgba(139, 92, 246, 0.3);
   border-radius: 24px;
   overflow: hidden;
-  margin: 0 40px;
+  width: calc(100% - 40px);
   max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.6),
     0 0 40px rgba(139, 92, 246, 0.1),
@@ -1704,10 +1672,20 @@ select.form-input {
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .hero-image {
-    display: none;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
   }
 
   .skills-grid {
@@ -1734,9 +1712,153 @@ select.form-input {
     padding: 60px 20px;
   }
 
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    /* Reduced padding from 200px */
+    /* Even more space to ensure no overlap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .hero-text h1 {
     font-size: 36px;
   }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Fix for hero image and HUD on mobile */
+  .hero-image {
+    width: 300px;
+    height: 400px;
+    /* Increased height significantly */
+    margin: 40px auto 30px;
+    border-radius: 20px;
+    /* Enforce shape on container */
+    overflow: hidden;
+    /* Clip everything (shine, overlay, img) to this shape */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Add shadow to container instead of img */
+  }
+
+  /* Reset child radii since container clips them */
+  .hero-image img,
+  .hero-image-shine,
+  .hero-image-border {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-card-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    /* Increased height for effects as requested */
+    padding: 0 12px;
+    background: rgba(0, 0, 0, 0.85);
+    /* Darker for better contrast */
+    border-radius: 0;
+    /* Container handles the curve */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+  }
+
+  .overlay-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .overlay-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 100%;
+  }
+
+  .availability-badge {
+    margin: 0 auto 24px;
+    justify-content: center;
+  }
+
+
+  .terminal-body {
+    padding: 24px 20px !important;
+  }
+
+  .overlay-text {
+    font-size: 9px;
+    /* Slightly larger text */
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    /* Fix vertical alignment */
+    padding-top: 1px;
+    /* Optical adjustment */
+  }
+
+  .overlay-item svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Ensure shine and image align perfectly */
+  .hero-image img {
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  .hero-image-shine,
+  .hero-image-border {
+    border-radius: 0;
+  }
+
 
   .section-heading {
     font-size: 28px;
@@ -1748,9 +1870,6 @@ select.form-input {
     grid-template-columns: 1fr;
   }
 
-  .terminal-section {
-    margin: 0 20px;
-  }
 
   .footer-content {
     flex-direction: column;
@@ -1776,6 +1895,7 @@ select.form-input {
   border-radius: 100px;
   margin-bottom: 24px;
   animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  align-self: flex-start;
 }
 
 .availability-dot {
@@ -1829,4 +1949,103 @@ select.form-input {
 ::selection {
   background: var(--accent);
   color: white;
+}
+
+/* Hamburger Menu & Mobile Navigation */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 110;
+  padding: 5px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(5, 5, 10, 0.95);
+  backdrop-filter: blur(15px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0;
+}
+
+.mobile-nav-links li a {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.02em;
+}
+
+.mobile-nav-links li a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .nav-cta {
+    display: none;
+    /* Hide CTA on mobile to prevent crowding */
+  }
+
+  .navbar {
+    padding: 15px 20px;
+    justify-content: space-between;
+  }
 }
