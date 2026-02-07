@@ -14,36 +14,11 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const [isHovered, setIsHovered] = useState(false);
-    const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return;
         setSelectedIndex(emblaApi.selectedScrollSnap());
     }, [emblaApi]);
-
-    // Autoplay logic
-    useEffect(() => {
-        if (!emblaApi) return;
-
-        const startAutoplay = () => {
-            if (autoplayRef.current) clearInterval(autoplayRef.current);
-            autoplayRef.current = setInterval(() => {
-                if (!isHovered) {
-                    emblaApi.scrollNext();
-                }
-            }, 3000);
-        };
-
-        if (!isHovered) {
-            startAutoplay();
-        } else {
-            if (autoplayRef.current) clearInterval(autoplayRef.current);
-        }
-
-        return () => {
-            if (autoplayRef.current) clearInterval(autoplayRef.current);
-        };
-    }, [emblaApi, isHovered]);
 
     useEffect(() => {
         if (!emblaApi) return;
