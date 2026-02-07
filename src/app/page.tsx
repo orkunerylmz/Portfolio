@@ -84,9 +84,9 @@ const projects = [
     ]
   },
   {
-    name: "Z-Value-Calculator",
+    name: "Z Value Calculator",
     desc: "Z-skoru hesaplamaları için Streamlit tabanlı web uygulaması. İnteraktif görselleştirmeler sunar.",
-    fullDesc: "Z-Value-Calculator, istatistik öğrencileri ve araştırmacılar için geliştirilmiş kullanıcı dostu bir web uygulamasıdır. Normal dağılım üzerinde z-skor hesaplamaları, olasılık dağılımları ve güven aralığı analizleri yapabilirsiniz. Streamlit ile geliştirilmiş interaktif arayüzü sayesinde parametreleri gerçek zamanlı değiştirip sonuçları anında görebilirsiniz.",
+    fullDesc: "Z Value Calculator, istatistik öğrencileri ve araştırmacılar için geliştirilmiş kullanıcı dostu bir web uygulamasıdır. Normal dağılım üzerinde z-skor hesaplamaları, olasılık dağılımları ve güven aralığı analizleri yapabilirsiniz. Streamlit ile geliştirilmiş interaktif arayüzü sayesinde parametreleri gerçek zamanlı değiştirip sonuçları anında görebilirsiniz.",
     lang: "Python",
     url: "https://github.com/orkunerylmz/Z-Value-Calculator",
     images: [
@@ -96,6 +96,17 @@ const projects = [
       "/images/calculator/calculator4.png",
       "/images/calculator/calculator5.png",
       "/images/calculator/calculator6.png",
+    ]
+  },
+  {
+    name: "Orkun Eryılmaz (Portfolio)",
+    desc: "Next.js ve modern web teknolojileri ile geliştirilmiş interaktif portfolyo sitesi.",
+    fullDesc: "Bu web sitesi, projelerimi sergilemek ve profesyonel kimliğimi yansıtmak amacıyla geliştirildi. Next.js 15 (App Router), interaktif grafikler, karmaşık animasyonlar ve Nodemailer tabanlı bir iletişim formu gibi özellikleri barındırır. SEO dostu yapısı ve yüksek performans odaklı tasarımı ile kullanıcı dostu bir deneyim sunar.",
+    lang: "Next.js / TypeScript",
+    url: "https://github.com/orkunerylmz/Portfolio",
+    images: [
+      "/images/portfolio/portfolio1.png",
+      "/images/portfolio/portfolio2.png",
     ]
   },
 ];
@@ -129,7 +140,7 @@ const pricing = [
   {
     name: "Kurumsal",
     desc: "Büyük ölçekli projeler",
-    price: "35.000",
+    price: "35.000+",
     features: [
       "End-to-end ML pipeline",
       "Özel model eğitimi",
@@ -460,7 +471,7 @@ export default function Home() {
           <div className="section-title">Projelerim</div>
           <h2 className="section-heading">GitHub Projeleri</h2>
           <p className="section-desc">
-            Açık kaynak olarak geliştirdiğim veri bilimi ve analiz projeleri.
+            Açık kaynak olarak geliştirdiğim yazılım ve veri odaklı projelerim.
           </p>
           <div className="projects-grid">
             {projects.map((project) => (
@@ -499,16 +510,21 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
 
-          <div className="flex justify-center" style={{ marginTop: '30px' }}>
+            {/* See More Card */}
             <a
               href="https://github.com/orkunerylmz"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary group"
+              className="project-see-more"
             >
-              Daha Fazlası
+              <div className="see-more-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 5v14M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div className="see-more-text">Daha Fazlası</div>
+              <p className="see-more-desc">Tüm projelerimi GitHub üzerinde inceleyin</p>
             </a>
           </div>
         </section>
@@ -518,7 +534,7 @@ export default function Home() {
           <div className="section-title">Fiyatlandırma</div>
           <h2 className="section-heading">Hizmet Paketleri</h2>
           <p className="section-desc">
-            Freelance veri bilimi ve makine öğrenmesi projeleri için fiyatlandırma.
+            Özel yazılım çözümleri ve veri projeleri için freelance hizmet paketleri.
           </p>
           <div className="pricing-grid">
             {pricing.map((plan) => (
