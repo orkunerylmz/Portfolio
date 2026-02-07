@@ -315,7 +315,7 @@ body {
   transform: translateX(-50%);
   z-index: 1000;
   width: calc(100% - 40px);
-  max-width: 1200px;
+  max-width: 900px;
   padding: 14px 32px;
   display: flex;
   justify-content: space-between;
