@@ -12,7 +12,7 @@ interface ProjectCarouselProps {
 const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
     const [isHovered, setIsHovered] = useState(false);
     const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -48,7 +48,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
     useEffect(() => {
         if (!emblaApi) return;
         onSelect();
-        setScrollSnaps(emblaApi.scrollSnapList());
+
         emblaApi.on("select", onSelect);
         emblaApi.on("reInit", onSelect);
     }, [emblaApi, onSelect]);
@@ -125,7 +125,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
 
             {/* Dots */}
             <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10 pointer-events-none">
-                {scrollSnaps.map((_, index) => (
+                {images.map((_, index) => (
                     <div
                         key={index}
                         className={`
