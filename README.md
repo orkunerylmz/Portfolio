@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Orkun Eryılmaz | Portfolio
 
-## Getting Started
+Modern, interaktif ve şık bir veri bilimi & makine öğrenmesi portfolyosu. Bu proje, projelerimi sergilemek, hizmetlerimi sunmak ve iletişim kanallarını tek bir platformda toplamak amacıyla Next.js ile geliştirilmiştir.
 
-First, run the development server:
+![Portfolio Preview](./public/images/portfolio.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Özellikler
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **İnteraktif Proje Kartları:** Projeler arasında geçiş yapmayı sağlayan özel carousel bileşeni.
+-   **İletişim Formu (Backend Entegrasyonlu):** Nodemailer ve Gmail API kullanılarak oluşturulmuş, gerçek e-posta gönderimi yapan iletişim formu.
+-   **Dinamik Arka Plan:** Fare hareketlerine duyarlı interaktif grid sistemi ve aurora efektleri.
+-   **Hizmet Paketleri ve Fiyatlandırma:** Güncel hizmet paketleri ve iletişim formuna yönlendiren butonlar.
+-   **Mobil Uyumlu Tasarım:** Tüm cihazlarda kusursuz görünen responsive arayüz.
+-   **Terminal Arayüzü:** Hakkımda bilgileri için nostaljik terminal görünümü.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Teknoloji Yığını
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+-   **Dil:** [TypeScript](https://www.typescriptlang.org/)
+-   **Styling:** Vanilla CSS
+-   **Backend/Mail:** [Nodemailer](https://nodemailer.com/)
 
-## Learn More
+## 📦 Kurulum
 
-To learn more about Next.js, take a look at the following resources:
+Projeyi yerelinizde çalıştırmak için:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Depoyu klayonlayın:**
+    ```bash
+    git clone https://github.com/orkunerylmz/Portfolio.git
+    cd Portfolio
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Bağımlılıkları yükleyin:**
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **.env.local dosyasını oluşturun:**
+    ```env
+    EMAIL_USER=your-email@gmail.com
+    EMAIL_PASS=your-gmail-app-password
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Çalıştırın:**
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📧 İletişim
+
+-   **Email:** [orkunerylmz@gmail.com](mailto:orkunerylmz@gmail.com)
+-   **GitHub:** [@orkunerylmz](https://github.com/orkunerylmz)
+-   **Instagram:** [@orkunerylmz](https://instagram.com/orkunerylmz)
+
+---
+*Bu proje Orkun Eryılmaz tarafından geliştirilmiştir.*
