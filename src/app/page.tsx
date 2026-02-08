@@ -45,8 +45,8 @@ const skills = [
 const projects = [
   {
     name: "Grafiker",
-    desc: "Karmaşık verileri estetik, yayınlanabilir grafiklere ve detaylı analizlere dönüştüren profesyonel masaüstü uygulaması.",
-    fullDesc: "Grafiker, veri bilimciler ve araştırmacılar için tasarlanmış güçlü bir masaüstü uygulamasıdır. CSV, Excel ve JSON formatlarındaki verileri okuyabilir, çeşitli istatistiksel analizler yapabilir ve sonuçları profesyonel kalitede grafikler olarak dışa aktarabilirsiniz. Korelasyon analizi, regresyon modelleri, dağılım grafikleri ve özelleştirilebilir tema seçenekleri sunar.",
+    desc: "Anket verilerini görselleştirmek için özel olarak geliştirilmiş profesyonel bir grafik oluşturma uygulaması.",
+    fullDesc: "Grafiker, anket verilerini analiz etmek ve görselleştirmek için tasarlanmış güçlü bir masaüstü uygulamasıdır. CSV ve Excel formatlarındaki verileri okuyabilir; sonuçları profesyonel grafikler ile Word, PDF ve PNG formatlarında dışa aktarabilirsiniz. Tamamen anket verilerine özel olarak geliştirilmiş görselleştirme araçları ve özelleştirilebilir tema seçenekleri sunar.",
     lang: "Python / PyQt6",
     url: "https://github.com/orkunerylmz/Grafiker",
     images: [
