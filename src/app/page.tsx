@@ -382,7 +382,7 @@ export default function Home() {
               </div>
               <div className="terminal-info-item">
                 <div className="info-label">Durum</div>
-                <div className="info-value" style={{ color: '#10b981' }}>● Staja Açık</div>
+                <div className="info-value" style={{ color: '#10b981' }}>● Yeni Projelere Müsait</div>
               </div>
             </div>
 
