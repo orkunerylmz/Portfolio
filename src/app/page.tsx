@@ -117,46 +117,7 @@ const projects = [
   },
 ];
 
-const pricing = [
-  {
-    name: "Başlangıç",
-    desc: "Küçük projeler için ideal",
-    price: "5.000",
-    features: [
-      "Veri analizi raporu",
-      "Temel görselleştirmeler",
-      "1 revizyon hakkı",
-      "3 günde teslimat",
-    ],
-  },
-  {
-    name: "Profesyonel",
-    desc: "Orta ölçekli projeler için",
-    price: "15.000",
-    featured: true,
-    features: [
-      "Kapsamlı veri analizi",
-      "ML model geliştirme",
-      "Interaktif dashboard",
-      "3 revizyon hakkı",
-      "7 günde teslimat",
-      "Teknik dokümantasyon",
-    ],
-  },
-  {
-    name: "Kurumsal",
-    desc: "Büyük ölçekli projeler",
-    price: "35.000+",
-    features: [
-      "End-to-end ML pipeline",
-      "Özel model eğitimi",
-      "API entegrasyonu",
-      "Sınırsız revizyon",
-      "Öncelikli destek",
-      "Kaynak kod teslimi",
-    ],
-  },
-];
+
 
 const contacts = [
   { label: "GitHub", value: "github.com/orkunerylmz", icon: "github", url: "https://github.com/orkunerylmz" },
@@ -244,7 +205,6 @@ export default function Home() {
           <li><a href="#hakkimda">Hakkımda</a></li>
           <li><a href="#yetenekler">Yetenekler</a></li>
           <li><a href="#projeler">Projeler</a></li>
-          <li><a href="#fiyatlandirma">Fiyatlandırma</a></li>
           <li><a href="#iletisim">İletişim</a></li>
         </ul>
         <a href="#iletisim" className="nav-cta">Bana Ulaşın</a>
@@ -267,7 +227,6 @@ export default function Home() {
           <li><a href="#hakkimda" onClick={() => setIsMenuOpen(false)}>Hakkımda</a></li>
           <li><a href="#yetenekler" onClick={() => setIsMenuOpen(false)}>Yetenekler</a></li>
           <li><a href="#projeler" onClick={() => setIsMenuOpen(false)}>Projeler</a></li>
-          <li><a href="#fiyatlandirma" onClick={() => setIsMenuOpen(false)}>Fiyatlandırma</a></li>
           <li><a href="#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</a></li>
         </ul>
       </div>
@@ -496,36 +455,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="section" id="fiyatlandirma">
-          <div className="section-title">Fiyatlandırma</div>
-          <h2 className="section-heading">Hizmet Paketleri</h2>
-          <p className="section-desc">
-            Özel yazılım çözümleri ve veri projeleri için freelance hizmet paketleri.
-          </p>
-          <div className="pricing-grid">
-            {pricing.map((plan) => (
-              <div
-                key={plan.name}
-                className={`pricing-card ${plan.featured ? "featured" : ""}`}
-              >
-                <div className="pricing-name">{plan.name}</div>
-                <div className="pricing-desc">{plan.desc}</div>
-                <div className="pricing-price">
-                  ₺{plan.price}<span>/proje</span>
-                </div>
-                <ul className="pricing-features">
-                  {plan.features.map((feature, i) => (
-                    <li key={i}>{feature}</li>
-                  ))}
-                </ul>
-                <a href="#iletisim" className="pricing-btn">
-                  {plan.featured ? "Hemen Başlayalım" : "Teklif Al"}
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
+
 
         {/* Contact Section */}
         <section className="section" id="iletisim">
@@ -685,7 +615,6 @@ export default function Home() {
             <a href="#hakkimda">Hakkımda</a>
             <a href="#yetenekler">Yetenekler</a>
             <a href="#projeler">Projeler</a>
-            <a href="#fiyatlandirma">Fiyatlandırma</a>
             <a href="#iletisim">İletişim</a>
           </div>
           <div className="footer-copy">© {new Date().getFullYear()} Orkun Eryılmaz. Tüm hakları saklıdır.</div>
