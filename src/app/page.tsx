@@ -207,7 +207,7 @@ export default function Home() {
           <li><a href="#projeler">Projeler</a></li>
           <li><a href="#iletisim">İletişim</a></li>
         </ul>
-        <a href="#iletisim" className="nav-cta">Bana Ulaşın</a>
+        <a href="#iletisim-formu" className="nav-cta">Bana Ulaşın</a>
 
         {/* Hamburger Button */}
         <button
@@ -229,6 +229,7 @@ export default function Home() {
           <li><a href="#projeler" onClick={() => setIsMenuOpen(false)}>Projeler</a></li>
           <li><a href="#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</a></li>
         </ul>
+        <a href="#iletisim-formu" className="mobile-cta" onClick={() => setIsMenuOpen(false)}>Bana Ulaşın</a>
       </div>
 
       {/* Main */}
@@ -496,7 +497,7 @@ export default function Home() {
 
             <div className="contact-form-wrapper">
               <div className="hero-image-border" />
-              <form className="contact-form" onSubmit={handleFormSubmit}>
+              <form id="iletisim-formu" className="contact-form" onSubmit={handleFormSubmit}>
                 <div className="form-grid">
                   <div className="form-group">
                     <label>Ad Soyad</label>
